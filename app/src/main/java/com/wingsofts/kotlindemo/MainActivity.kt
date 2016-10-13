@@ -9,6 +9,11 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-    textView.text = "hello kotlin"
+    button.setOnClickListener {
+      val user = User("name")
+      user.id = "100"
+      SecondActivity.startActivity(this,user)
+    }
+
   }
 }
